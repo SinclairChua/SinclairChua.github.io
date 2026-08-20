@@ -1,20 +1,23 @@
-/* 重置所有边距，清除任何背景 */
+/* ---------- 第1步：CSS 重置 & 全局基础 ---------- */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;  /* 让 padding 和 border 不撑大盒子 */
 }
 
-html, body {
-    width: 100%;
-    /* 让 body 高度自动随内容撑开，而不是 100vh */
-    min-height: 100%;
-    background: #ffffff;  /* 纯白背景，确保没有图片干扰 */
+body {
+    font-family: 'Georgia', 'Times New Roman', serif; /* 学术风衬线字体 */
+    background-color: #f4f2eb;  /* 复古米灰背景 */
+    color: #1e1e1e;
+    line-height: 1.7;
+    padding: 30px 20px;        /* 上下30px，左右20px */
 }
 
-/* 图片样式：让它按照自己的原始尺寸显示，并随页面滚动 */
-img {
-    display: block;        /* 去掉图片底部空隙 */
-    width: 100%;           /* 宽度填满屏幕（适应窄屏） */
-    height: auto;          /* 高度自动，保持比例 */
-    /* 如果你想让图片按原始尺寸显示（可能有滚动条），可以把 width 改成 auto */
+.container {
+    max-width: 1200px;         /* 最大宽度，在大屏上舒适阅读 */
+    margin: 0 auto;            /* 居中 */
+    background-color: #ffffff;
+    padding: 35px 40px;
+    border-radius: 12px;       /* 轻微圆角 */
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.07); /* 柔和阴影 */
 }
